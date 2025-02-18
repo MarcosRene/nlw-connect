@@ -1,14 +1,14 @@
-import { ArrowRight, Copy, Mail } from "lucide-react" 
-import { Button } from "@/components/button";
-import { IconButton } from "@/components/icon-button";
-import { InputControl, InputPrefix, InputRoot } from "@/components/input";
+import { Button } from '@/components/button'
+import { IconButton } from '@/components/icon-button'
+import { InputControl, InputPrefix, InputRoot } from '@/components/input'
+import { ArrowRight, Copy, Mail } from 'lucide-react'
 
 export default function Home() {
   return (
     <main>
       <Button>
         Enviar
-        <ArrowRight /> 
+        <ArrowRight />
       </Button>
 
       <IconButton>
@@ -16,14 +16,14 @@ export default function Home() {
       </IconButton>
 
       <div>
-        <InputRoot> 
+        <InputRoot>
           <InputControl placeholder="Digite seu email" />
           <InputPrefix>
             <Mail className="size-5" />
           </InputPrefix>
         </InputRoot>
 
-        <InputRoot error> 
+        <InputRoot error>
           <InputPrefix>
             <Mail />
           </InputPrefix>
@@ -31,5 +31,5 @@ export default function Home() {
         </InputRoot>
       </div>
     </main>
-  );
+  )
 }
