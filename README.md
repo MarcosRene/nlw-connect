@@ -19,19 +19,23 @@ Este projeto foi construído durante o evento NLW Connect, disponibilizado pela 
 - Gerenciador de pacotes npm
 
 **Passos:**
-1. Instale as dependências:
+1. Clone o seguinte repositório:
+   ```bash
+   git clone https://github.com/rocketseat-education/nlw-connect-node
+   ```
+2. Instale as dependências:
    ```bash
    npm i
    ```
-2. Execute o Docker:
+3. Execute o Docker:
    ```bash
    docker-compose up -d
    ```
-3. Execute as migrations:
+4. Execute as migrations:
    ```bash
    npm run db:migrate
    ```
-4. Inicie a aplicação:
+5. Inicie a aplicação:
    ```bash
    npm run dev
    ```
