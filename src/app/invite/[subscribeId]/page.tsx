@@ -1,11 +1,18 @@
 import logo from '@/assets/logo.svg'
 import Image from 'next/image'
-import { InvateLinkInput } from './invate-link-input'
+import { InviteLinkInput } from './invite-link-input'
 import { Ranking } from './ranking'
 import { Stats } from './stats'
 
-export default function InvatePage() {
-  const inviteLink = 'http://localhost:3000/invite/123456789'
+interface InvatePageProps {
+  params: Promise<{
+    subscribeId: string
+  }>
+}
+
+export default async function InvitePage({ params  }: InvatePageProps) {
+  const subscribeId = (await params).subscribeId
+  const inviteLink = `http://localhost:3333/invites/${subscribeId}`
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
@@ -33,8 +40,8 @@ export default function InvatePage() {
             </p>
           </div>
 
-          <InvateLinkInput inviteLink={inviteLink} />
-          <Stats />
+          <InviteLinkInput inviteLink={inviteLink} />
+          <Stats subscribeId={subscribeId}  />
         </div>
       </div>
 

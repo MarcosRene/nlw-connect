@@ -4,11 +4,11 @@ import { IconButton } from '@/components/icon-button'
 import { InputControl, InputPrefix, InputRoot } from '@/components/input'
 import { Copy, Link } from 'lucide-react'
 
-interface InvateLinkInputProps {
+interface InviteLinkInputProps {
   inviteLink: string
 }
 
-export function InvateLinkInput({ inviteLink }: InvateLinkInputProps) {
+export function InviteLinkInput({ inviteLink }: InviteLinkInputProps) {
   function copyInvateLink() {
     navigator.clipboard.writeText(inviteLink)
   }
